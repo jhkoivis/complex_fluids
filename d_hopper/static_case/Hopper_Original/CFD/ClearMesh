@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cp ./constant/polyMesh/blockMeshDict ./
+rm -r ./constant/polyMesh/*
+cp ./blockMeshDict ./constant/polyMesh
+rm -r ./constant/extendedFeatureEdgeMesh/*
+rm -r ./constant/triSurface/*.eMesh
+
