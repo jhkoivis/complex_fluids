@@ -14,7 +14,7 @@ b = ('fix', 'm4', 'all', 'property/global',
 cc.replace_liggghts_command('dem.init', a, b)
 
 
-cc.create_blockMeshDict()    
+#cc.create_blockMeshDict()    
 cc.create_liggghts_inputs()
 
 

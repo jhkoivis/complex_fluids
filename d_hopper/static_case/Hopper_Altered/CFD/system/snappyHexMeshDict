@@ -36,12 +36,12 @@ geometry
     }
 
     //- Refine a bit extra around the small centre hole
-    refineHole
-    {
-        type searchableSphere;
-        centre (0 0 0);
-        radius 0.1;
-    }
+    //refineHole
+    //{
+    //    type searchableSphere;
+    //    centre (0 0 0);
+    //    radius 0.1;
+    //}
 };
 
 
@@ -128,14 +128,19 @@ castellatedMeshControls
     //   needs to be closed for this to be possible.
     // - outside. Same but cells outside.
 
+
     refinementRegions
     {
-        refineHole
-        {
-            mode inside;
-            levels ((1E15 3));
-        } 
-    } 
+    }
+
+    //refinementRegions
+    //{
+    //    refineHole
+    //    {
+    //        mode inside;
+    //        levels ((1E15 3));
+    //    } 
+    //} 
 
 
     // Mesh selection
@@ -163,15 +168,15 @@ snapControls
 {
     //- Number of patch smoothing iterations before finding correspondence
     //  to surface
-    nSmoothPatch 3;
+    nSmoothPatch 1;
 
     //- Relative distance for points to be attracted by surface feature point
     //  or edge. True distance is this factor times local
     //  maximum edge length.
-    tolerance 1.0;
+    tolerance 1e-1;
 
     //- Number of mesh displacement relaxation iterations.
-    nSolveIter 300;
+    nSolveIter 10;
 
     //- Maximum number of snapping relaxation iterations. Should stop
     //  before upon reaching a correct mesh.

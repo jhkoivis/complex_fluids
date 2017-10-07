@@ -64,7 +64,8 @@ fix         cfd2 all couple/cfd/force/implicit
 fix	integrate all nve/sphere
 
 # Gravity
-fix	grav all gravity 9.81 vector 0.0 0.0 -1.0
+fix	grav 	all gravity 	9.81 vector 0.0 0.0 -1.0
+fix 	bu 	all buoyancy 	level 0.25 dim z density 1000
 
 # Time step
 timestep 0.000004
@@ -97,8 +98,8 @@ fix dhprint all print 100 "${nhtime} ${nh}" append time_vs_N.txt
 #################################################################
 
 # Create imaging information
-dump	dumpstl all stl 100000 dump*.stl
-dump	dmp all custom 100000 dump*.hopper id type type x y z ix iy iz vx vy vz fx fy fz omegax omegay omegaz radius
+dump	dumpstl all stl 1000000 dump*.stl
+dump	dmp all custom 1000000 dump*.hopper id x y z vx vy vz radius
 
 ### Execution and further settings
 # Fill the hopper
