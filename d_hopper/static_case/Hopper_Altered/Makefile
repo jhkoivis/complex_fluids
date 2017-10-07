@@ -14,7 +14,7 @@ clean:
 	rm -rf DEM/dump*	
 	rm -rf CFD/constant/polyMesh
 	rm -rf CFD/constant/extendedFeatureEdgeMesh
-	rm -rf CFD/constant/trisurface	
+	rm -rf CFD/constant/triSurface/*.eMesh 	
 	rm -rf CFD/0/pointLevel
 	rm -rf CFD/0/cellLevel
 
